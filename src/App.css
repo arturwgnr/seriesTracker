@@ -1,0 +1,347 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background: #0a0f1c;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Landing wrapper */
+.landing {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+
+  background: linear-gradient(rgba(10, 15, 28, 0.9), rgba(10, 15, 28, 0.9)),
+    url("https://wallpaperaccess.com/full/329583.jpg") center/cover no-repeat;
+}
+
+/* Hero central */
+.landing-hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #08f7fe, #904dce);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(8, 247, 254, 0.3);
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Ações */
+.landing-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.9rem 2rem;
+  border-radius: 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #08f7fe;
+  color: #0a0f1c;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #904dce;
+  color: #fff;
+  box-shadow: 0 0 15px #904dce;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #08f7fe;
+  color: #08f7fe;
+}
+
+.btn-secondary:hover {
+  border: 2px solid #2879c4;
+  background-color: #2879c4;
+  color: white;
+  box-shadow: 0 0 15px #2879c4;
+}
+
+/* Footer */
+.landing-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 2.2rem;
+  }
+  .tagline {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* =======================
+   DASHBOARD
+======================= */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(
+      to bottom right,
+      rgba(10, 15, 28, 0.95),
+      rgba(15, 20, 40, 0.98)
+    ),
+    url("https://wallpaperaccess.com/full/2646721.jpg") center/cover no-repeat;
+  color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-logo {
+  cursor: pointer;
+  margin-right: 25px;
+  margin-top: none;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #08f7fe, #904dce);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: #bbb;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-link:hover {
+  background: rgba(8, 247, 254, 0.15);
+  color: #08f7fe;
+}
+
+.sidebar-link.active {
+  background: rgba(8, 247, 254, 0.25);
+  color: #08f7fe;
+  font-weight: bold;
+}
+
+/* Main */
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-subtitle {
+  color: linear-gradient(90deg, #08f7fe, #904dce);
+}
+
+.dashboard-header h1 {
+  font-size: 1.6rem;
+  background: linear-gradient(90deg, #08f7fe, #904dce);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+/* =======================
+   SERIES GRID
+======================= */
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Series Card */
+.series-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.series-card:hover {
+  background: rgba(255, 255, 255, 0.13);
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(8, 246, 254, 0.068);
+}
+
+/* Imagem */
+.series-card img {
+  width: 100%;
+  max-width: 160px;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Título */
+.series-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+/* Gêneros */
+.series-card p {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-bottom: 0.5rem;
+}
+
+/* Rating */
+.series-card span {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #f3e51a;
+  margin-top: auto;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .series-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .series-card img {
+    max-width: 120px;
+  }
+}
+
+/* =======================
+   Search Input
+======================= */
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  margin: 1.5rem auto;
+  padding: 0.8rem 1.2rem;
+  border-radius: 40px;
+  border: 2px solid rgba(8, 247, 254, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.search-input:focus {
+  border-color: #08f7fe;
+  box-shadow: 0 0 15px rgba(8, 246, 254, 0.267);
+  background: rgba(10, 15, 28, 0.9);
+}
